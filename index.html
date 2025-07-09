@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div>
+	<div class="inputs-fields">
+		<label for="menu-race">Race (k1)</label>
+		<select id="menu-race">
+			<option value="autres">Autres</option>
+		</select>
+		
+		<label for="menu-activite">Facteur comportemental (k2)</label>
+		<select id="menu-activite">
+			<option value="sedentaire">Tres calme, sedentaire ou sterilisé</option>
+			<option value="calme">Calme, peu actif</option>
+			<option value="normal">Normal</option>
+			<option value="actif">Nerveux, actif</option>
+			<option value="hyperactif">Nerveux et hyperactif</option>
+		</select>
+		
+		<label for="menu-sterilise">Sterilisé ?</label>
+		<select id="menu-sterilise">
+			<option value="Oui">Oui</option>
+			<option value="Non">Non</option>
+		</select>
+		
+		<label for="menu-habitat">Environnement / Habitat (kc)</label>
+		<select id="menu-habitat">
+			<option value="chaud">> 30°C</option>
+			<option value="interieur">~ 20°C</option>
+			<option value="temperer">~ 10°C</option>
+			<option value="froid">~ 0°C</option>
+			<option value="hivernales">~ -10°C</option>
+		</select>
+		
+		<label>Poids
+			<input type="number" id="poids" placeholder="Enter a number" />
+		</label>
+		<label>BCS
+			<input type="number" id="bcs" placeholder="Enter a number" />
+		</label>
+		<h3 id="res">...</h3>
+	</div>
+	<div class="inputs-fields">
+		<h3>Infos croquettes</h3>
+		<label>Humidité
+			<input type="number" id="humidite" placeholder="Enter a number" />
+		</label>
+		<label>Proteines totales (PT)
+			<input type="number" id="proteines" placeholder="Enter a number" />
+		</label>
+		<label>Matieres grasses (MG)
+			<input type="number" id="mg" placeholder="Enter a number" />
+		</label>
+		<label>Fibres / Cellulose brute
+			<input type="number" id="fibres" placeholder="Enter a number" />
+		</label>
+		<label>Cendres / Minéraux
+			<input type="number" id="cendres" placeholder="Enter a number" />
+		</label>
+		<h4 id="em">Energie metabolique</h4>
+	</div>
+</div>
+	
+<script src="script.js"></script>
+</body>
+</html>
