@@ -48,9 +48,29 @@ function calcul_apport_croquettes() {
 	energie_metabolique = 3.5 * proteines + 3.5 * een + 8.5 * mg; // En Kcal/100g
 	energie_metabolique = energie_metabolique * 10; // En Kcal/kg
 	let em_display = document.getElementById("em");
-	em_display.innerHTML = "Energie metabolique: " + energie_metabolique + " Kcal/Kg";
+    if (humidite && proteines && mg && fibres && cendres)
+	    em_display.innerHTML = "Energie metabolique: " + energie_metabolique + " Kcal/Kg";
+    else
+        em_display.innerHTML = "Energie metabolique: Pas assez d'information sur l'alimation!";
+
 }
 
+if (document.getElementById("humidite")){
+	let cendre = document.getElementById("humidite");
+	cendre.addEventListener('input' ,calcul_apport_croquettes);
+}
+if (document.getElementById("proteines")){
+	let cendre = document.getElementById("proteines");
+	cendre.addEventListener('input' ,calcul_apport_croquettes);
+}
+if (document.getElementById("mg")){
+	let cendre = document.getElementById("mg");
+	cendre.addEventListener('input' ,calcul_apport_croquettes);
+}
+if (document.getElementById("fibres")){
+	let cendre = document.getElementById("fibres");
+	cendre.addEventListener('input' ,calcul_apport_croquettes);
+}
 if (document.getElementById("cendres")){
 	let cendre = document.getElementById("cendres");
 	cendre.addEventListener('input' ,calcul_apport_croquettes);
